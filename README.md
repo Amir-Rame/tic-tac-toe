@@ -1,7 +1,7 @@
 # tic-tac-toe
 TIC-TAC-TOE game made with js
 
-> single player and 2 player mode.
+> single player and 2 player mode./n
 > resizable playing board.
 
 othe features:
