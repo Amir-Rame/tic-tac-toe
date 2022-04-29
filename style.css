@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root{
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+
+    --color-dark:#0b090a;
+    --color-theme:#1b263b;
+    --color-accent-1:#ff595e;
+    --color-accent-2:#8ac926;
+    --color-accent-3:#00bbf9;
+    --color-gray:#d3d3d3;
+    --color-bright:#ffffff;
+}
+*,*::before,*::after{
+    inset:0;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:var(--color-bright);
+    user-select: none;
+}
+body{
+    background-color: var(--color-dark);
+}
+#cover{
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    inset:0;
+    background-color: #0b090a4f;
+    z-index: 1;
+    display: none;
+}
+.container{
+    width: min(70rem, 95vw);
+    margin: 0 auto;
+}
+.panel{
+    background-color: var(--color-theme);
+    margin: 2rem 0;
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    display:flex;
+    place-content: center;
+}
+.panel:nth-of-type(2){
+    justify-content: space-between;
+}
+
+.panel h1{
+    color:var(--color-accent-3);
+    font-size: 5rem;
+}
+.panel span{
+    color:var(--color-bright);
+    font-size: 3rem;
+    padding: .5rem;
+    border: 2px solid var(--color-accent-3);
+    border-radius:  10px;
+}
+.panel button{
+    background-color:var(--color-accent-3);
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+/* init menu */
+#init{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width:fit-content;
+    height: fit-content;
+    top:50%;
+    left:50%;
+    transition: all .2s ease-in-out;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: 2;
+    border: 3px solid var(--color-gray);
+}
+.select{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin:2rem 0;
+}
+#init h5{
+    font-size: 5rem;
+    padding:2rem 8rem;
+    background-color: var(--color-accent-1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.active-side{
+    color:var(--color-dark);
+    text-decoration: underline;
+    transform: scale(1.5);
+}
+#init h5:first-of-type{
+    background-color: var(--color-accent-2);
+}
+.mode-select{
+    justify-content: space-around;
+}
+#init button{
+    padding: 2rem 3rem;
+    border: 2px solid var(--color-accent-3);
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+.active-btn{
+    background-color:var(--color-accent-3) !important;
+}
+.size-select{
+    place-content: center;
+}
+.size-select span{
+    border:none;
+}
+.size-select input{
+    outline: none;
+    font-size: 3rem;
+    padding: .5rem 1rem;
+    color:var(--color-dark);
+}
+.game-init{
+    place-content: center;
+}
+.game-init button{
+    place-content: center;
+    margin:.6rem;
+}
+.game-init button:hover{
+    transform: scale(1.05)
+}
+.line{
+    height:4px;
+    background-color: var(--color-gray);
+    width:100%;
+    border-radius: 10px;;
+}
+/* announce */
+#announce{
+    display: flex;
+    place-content: center;
+    margin: 2rem auto;
+    background-color: var(--color-accent-2);
+    border-radius: 10px;
+    position: absolute;
+    width:fit-content;
+    height: fit-content;
+    top:10%;
+    left:50%;
+    transition: transform .2s ease-in-out;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: 2;
+    border: 5px solid var(--color-gray);
+}
+#announce span{
+    font-weight: bold;
+    padding:2rem 2rem;
+    font-size: 5rem;
+    display: flex;
+}
+#announce span::before,#announce span::after{
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background-color: var(--color-bright);
+    width:2rem;
+    height:2rem;
+    margin: 2.4rem;
+}
+/* board */
+#board{
+    display: grid;
+    gap:1rem;
+}
+.grid-item{
+    background-color: var(--color-gray);
+    width:10rem;
+    height:10rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item span{
+    font-size: 5rem;
+    height: fit-content;
+    color: var(--color-dark);
+    font-weight: bold;
+    border: none;
+}
+.filled-grid-item{
+    background-color: #b4b4b4;
+    border: 5px solid #ff0080;
+}
+
+

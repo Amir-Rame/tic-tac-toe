@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="cover"></div>
+    <div class="container">
+        <div class="panel">
+            <h1>TIC TAC TOE</h1>
+        </div>
+        <div class="panel">
+            <button id="new-game">NEW GAME</button>
+            <span id="turn">X's Turn</span>
+        </div>
+        <div class="panel">
+            <div id="board">
+
+            </div>
+        </div>
+        <!-- init -->
+        <div class="panel" id="init">
+            <div class="select">
+                <h5 class="active-side">X</h5>
+                <h5>O</h5>
+            </div>
+            <div class="line"></div>
+            <div class="select mode-select">
+                <button class="active-btn">VS AI</button>
+                <button>2 PLAYER</button>
+            </div>
+            <div class="line"></div>
+            <div class="select size-select">
+                <span>Size :</span>
+                <input type="number" name="size" id="board-size" value="3" min="3" max="5">
+            </div>
+            <div class="line"></div>
+            <div class="select game-init">
+                <button>START</button>
+                <button>CANCEL</button>
+            </div>
+        </div>
+        <!-- announce -->
+        <div id="announce">
+            <span>X HAS WON</span>
+        </div>
+    </div>
+</body>
+</html>
